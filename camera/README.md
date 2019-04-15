@@ -4,9 +4,11 @@
     A nice and simple intro but also few talks about these devices<br>
     - https://hackernoon.com/hacking-a-25-iot-camera-to-do-more-than-its-worth-41a8d4dc805c
     - https://news.ycombinator.com/item?id=16753548
-- Xiaomi Hacks<br>
-    https://github.com/samtap/fang-hacks<br>
-    https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks
+
+## Mainstream projects
+- https://github.com/samtap/fang-hacks
+- https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks
+- https://github.com/openipcamera/openipc-firmware
 
 ## software related stuff
 - ZoneMinder
