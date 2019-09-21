@@ -1,16 +1,20 @@
 
-# Cheap CNC hacks with DVD recycled parts
-- How to make mini CNC plotter 2D using scrap DVD<br>
+# *Cheap CNC hacks with DVD recycled parts*
+- **How to make mini CNC plotter 2D using scrap DVD**<br>
+  One of my favorites: Daniele Tartaglia and its simple plotter, useful for a lot of different things<br>
   https://www.youtube.com/watch?v=Q5ma1HDuotk&t=1s
-- Hack old DVD/CD into a CNC machine<br>
+- **Hack old DVD/CD into a CNC machine**<br>
   https://www.youtube.com/watch?v=RFo5MKSrM-k
-- Arduino mini CNC plotter from DVD/CD drives<br>
+- **Arduino mini CNC plotter from DVD/CD drives**<br>
   https://www.youtube.com/watch?v=E3vuzb_KL5c
-- DVD/CD drive CNC mini plotter<br>
+- **DVD/CD drive CNC mini plotter**<br>
   https://www.youtube.com/watch?v=s_W0cPu5Gqs
-- DIY PCB Ink Plotter using Arduino and GRBL CNC<br>
+- **DIY PCB Ink Plotter using Arduino and GRBL CNC**<br>
   https://www.youtube.com/watch?v=oPVc9ixj0iU
-- Make a mini CNC Machine without DVD ROM mechanism<br>
+- **Make a mini CNC Machine without DVD ROM mechanism**<br>
   https://www.youtube.com/watch?v=pPdk2-neduU
-- Arduino CNC Machine DIY<br>
+- **Arduino CNC Machine DIY**<br>
   https://www.youtube.com/watch?v=wuIylqhrCgc&t=3s
+- **How to Make a 3D Printer at Home**<br>
+  Classic 2DVD combo on the cheap but with a bowden extruder and few tricks, nice project indeed<br>
+  https://www.youtube.com/watch?v=govCOa52SsA
