@@ -12,3 +12,5 @@
   https://www.youtube.com/watch?v=oPVc9ixj0iU
 - Make a mini CNC Machine without DVD ROM mechanism<br>
   https://www.youtube.com/watch?v=pPdk2-neduU
+- Arduino CNC Machine DIY<br>
+  https://www.youtube.com/watch?v=wuIylqhrCgc&t=3s
