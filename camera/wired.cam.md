@@ -8,3 +8,4 @@
 
 # Not cheap but hackable
 - Escam G02, according to dafang-hacks this seems to be a nice choice, not the cheapest but within the 30$ range. ONVIF supported
+- Escam G01, has ethernet support as well as wifi, don't know if it's hackable
