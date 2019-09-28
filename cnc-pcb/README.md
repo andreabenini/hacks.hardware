@@ -18,3 +18,6 @@
 - **How to Make a 3D Printer at Home**<br>
   Classic 2DVD combo on the cheap but with a bowden extruder and few tricks, nice project indeed<br>
   https://www.youtube.com/watch?v=govCOa52SsA
+- **DIY PCB Milling Machine**<br>
+  Kalaakaar Makerspace, nice videos series with an home made PCB CNC milling machine, 3d parts required<br>
+  https://www.youtube.com/watch?v=PInmEPY54G4
