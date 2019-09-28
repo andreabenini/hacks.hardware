@@ -11,6 +11,9 @@
   https://www.youtube.com/watch?v=s_W0cPu5Gqs
 - **DIY PCB Ink Plotter using Arduino and GRBL CNC**<br>
   https://www.youtube.com/watch?v=oPVc9ixj0iU
+- **How to Make a Mini 3D Printer at home**<br>
+  this time a 3D Printer, seems to be fairly decent<br>
+  https://www.youtube.com/watch?v=Yzv7WhZaNEI
 - **Make a mini CNC Machine without DVD ROM mechanism**<br>
   https://www.youtube.com/watch?v=pPdk2-neduU
 - **Arduino CNC Machine DIY**<br>
