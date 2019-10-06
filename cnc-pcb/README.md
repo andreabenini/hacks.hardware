@@ -1,5 +1,8 @@
 
-# *Cheap CNC hacks with DVD recycled parts*
+## Stepper - A First Introduction
+- https://www.hackster.io/ingo-lohs/stepper-a-first-introduction-to-nema-17-ac15d7
+
+## *Cheap CNC hacks with DVD recycled parts*
 - **How to make mini CNC plotter 2D using scrap DVD**<br>
   One of my favorites: Daniele Tartaglia and its simple plotter, useful for a lot of different things<br>
   https://www.youtube.com/watch?v=Q5ma1HDuotk&t=1s
@@ -24,3 +27,9 @@
 - **DIY PCB Milling Machine**<br>
   Kalaakaar Makerspace, nice videos series with an home made PCB CNC milling machine, 3d parts required<br>
   https://www.youtube.com/watch?v=PInmEPY54G4
+
+## GRBL, DVD drives, Arduino links:
+- https://www.youtube.com/watch?v=m1n_CQJiO8A
+- https://www.youtube.com/watch?v=OzF3m-P1nFM
+- https://www.hackster.io/ingo-lohs/check-a-stepper-motor-from-the-dvd-rom-25ed1f
+- https://www.youtube.com/watch?v=cwwYBgH-w8A
