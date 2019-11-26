@@ -1,6 +1,7 @@
 
 ## Stepper - A First Introduction
 - https://www.hackster.io/ingo-lohs/stepper-a-first-introduction-to-nema-17-ac15d7
+- https://www.geckodrive.com/support/step-motor-basics.html
 
 ## *Cheap CNC hacks with DVD recycled parts*
 - **How to make mini CNC plotter 2D using scrap DVD**<br>
