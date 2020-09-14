@@ -28,6 +28,14 @@
 - **DIY PCB Milling Machine**<br>
   Kalaakaar Makerspace, nice videos series with an home made PCB CNC milling machine, 3d parts required<br>
   https://www.youtube.com/watch?v=PInmEPY54G4
+- **CoreXY CNC Plotter**  
+  https://www.instructables.com/id/CoreXY-CNC-Plotter/  
+  That's nice, a CoreXY plotter, simple design and few basic pieces. I'm not interested in the plotter itself but in the CoreXY design and it's basically similar
+  to what I'm trying to achieve.
+- **CNC Cyclone PCB Factory**  
+  https://www.instructables.com/id/Cyclone-PCB-Factory-My-Way-Step-by-Step/  
+  A CNC machine with a Dremel (why not ?). I'm a little bit skeptical about vibrations but it might be nice (and cheap, material costs are nuts)
+
 
 ## GRBL, DVD drives, Arduino links:
 - https://www.youtube.com/watch?v=m1n_CQJiO8A
