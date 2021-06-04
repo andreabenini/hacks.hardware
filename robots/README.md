@@ -7,3 +7,12 @@
   BTW, impressive feats: https://www.raspberrypi.org/blog/robotic-cat-petoi-nybble/
 - **Quadruped Robot Tsuki**<br>
   Do not follow this bot only. Lingkang Zhang seems to be a really talented guy, his creations are awesome and there's a lot of material, mostly related on quadruped robots but his research papers are useful as a whole. Nice to see him at http://zlethic.com/
+
+# Motors
+- **Tips for selecting DC motors for your mobile robot**  
+  Self explanatory title showing how to correctly use proper Math in a real scenario. Definitively the best resource
+  for it, it takes a while to read and understand the whole article but it's a really good read.  
+  https://www.servomagazine.com/magazine/article/tips_for_selecting_dc_motors_for_your_mobile_robot
+- **10 Steps to Choosing the Right Motors for Your Robotic Project**  
+  Some math and useful information for choosing the right motor for your projects.  
+  https://medium.com/husarion-blog/10-steps-to-choosing-the-right-motors-for-your-robotic-project-bf5c4b997407
