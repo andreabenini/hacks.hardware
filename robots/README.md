@@ -1,4 +1,12 @@
 
+# Omni/Multi purpose
+- **GoogleX moonshot robots**  
+  Kinda cool stuff here, multipurpose robots, wheeled bots with basic movements and 6 deg freedom arms. A lot of algebra and spacial recognition in human complex environments.
+  These bots are aimed toward solving daily tasks: sorting, cleaning, navigating, .... Not an easy task but they're doing real good. Lots of impressive feats
+  (some storytelling), inside mechanics, good inner details on basic macro areas from their videos (massive still frames to learn from them).  
+  - https://everydayrobots.com/
+  - https://x.company/projects/everyday-robots/
+
 # Walkers
 - **Build your own robotic cat**<br>
   Awesome open source project with reliable body and quite good design, Arduino controlled board could be replaced with a
