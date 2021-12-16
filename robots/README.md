@@ -6,6 +6,17 @@
   (some storytelling), inside mechanics, good inner details on basic macro areas from their videos (massive still frames to learn from them).  
   - https://everydayrobots.com/
   - https://x.company/projects/everyday-robots/
+- **Yandex’s delivery robot**  
+  The story behind the creation of Yandex’s delivery robots. This is a really nice project
+  description, much like some sort of storytelling/blog series. It's not too technical, there are
+  no in depth information, there's no code but as a maker I really appreciate the whole
+  project description, missed steps, project iterations, trial and error stages and so on.
+  The bot idea is heavily borrowed from Amazon Scout, it has the same shape/size/mechanics
+  and basic ideas but in a truly Russian style (sturdy frame, minimal components, less flashy
+  but reliable).  
+  Navigation software from their autonomous cars biggest brothers, I'm really impressed by them:
+  - [The story behind yandex bots](https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589),
+  storytelling, no tech details but really fun
 
 # Walkers
 - **Build your own robotic cat**<br>
