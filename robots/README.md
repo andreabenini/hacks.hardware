@@ -37,4 +37,6 @@
   https://medium.com/husarion-blog/10-steps-to-choosing-the-right-motors-for-your-robotic-project-bf5c4b997407
 - **L298N, Arduino code & schematics**  
   How to control DC motors using Arduino and the L298N motor driver.  
-  https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/
+  https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/  
+  https://dronebotworkshop.com/dc-motors-l298n-h-bridge/  
+  https://www.instructables.com/Control-A-DC-Mototr-Using-H-Bridge/
