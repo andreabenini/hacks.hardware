@@ -1,4 +1,3 @@
-
 # Omni/Multi purpose
 - **GoogleX moonshot robots**  
   Kinda cool stuff here, multipurpose robots, wheeled bots with basic movements and 6 deg freedom arms. A lot of algebra and spacial recognition in human complex environments.
@@ -18,6 +17,7 @@
   - [The story behind yandex bots](https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589),
   storytelling, no tech details but really fun
 
+
 # Walkers
 - **Build your own robotic cat**<br>
   Awesome open source project with reliable body and quite good design, Arduino controlled board could be replaced with a
@@ -26,6 +26,13 @@
   BTW, impressive feats: https://www.raspberrypi.org/blog/robotic-cat-petoi-nybble/
 - **Quadruped Robot Tsuki**<br>
   Do not follow this bot only. Lingkang Zhang seems to be a really talented guy, his creations are awesome and there's a lot of material, mostly related on quadruped robots but his research papers are useful as a whole. Nice to see him at http://zlethic.com/
+
+
+# Rocker Bogie designs
+- Stair climbing robot  
+  https://www.thingiverse.com/thing:5363032  
+  DTU Robocup contender, see also Thingiverse Martian Robot design (link in its description) where this one got design ideas
+
 
 # Motors
 - **Tips for selecting DC motors for your mobile robot**  
