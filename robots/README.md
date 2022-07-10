@@ -32,6 +32,12 @@
 - Stair climbing robot  
   https://www.thingiverse.com/thing:5363032  
   DTU Robocup contender, see also Thingiverse Martian Robot design (link in its description) where this one got design ideas
+- Rocker Bogie Mechanism  
+  https://www.slideshare.net/HaniroothChandraseka/rocker-bogie-mechanism-design-and-fabrication
+  Basic explaination but there's an important thing here: all formulas for calculating the length of the links, tilt base, wheels and so on.
+- ExoMy: A Low Cost 3D Printed Rover.  
+  https://github.com/esa-prl/ExoMy/wiki  
+  Kinda ESA version for babies
 
 
 # Motors
