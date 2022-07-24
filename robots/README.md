@@ -38,6 +38,8 @@
 - ExoMy: A Low Cost 3D Printed Rover.  
   https://github.com/esa-prl/ExoMy/wiki  
   Kinda ESA version for babies
+- Overall design on Research Gate  
+  https://www.researchgate.net/publication/313403109_Design_of_Rocker_Bogie_Mechanism
 
 
 # Motors
