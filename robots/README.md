@@ -40,6 +40,8 @@
   Kinda ESA version for babies
 - Overall design on Research Gate  
   https://www.researchgate.net/publication/313403109_Design_of_Rocker_Bogie_Mechanism
+- Nice design, solid math and simplicity  
+  https://github.com/Charlie5DH/Rocker-Bogie-Robot
 
 
 # Motors
