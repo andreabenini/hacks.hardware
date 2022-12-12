@@ -38,6 +38,11 @@
 - ExoMy: A Low Cost 3D Printed Rover.  
   https://github.com/esa-prl/ExoMy/wiki  
   Kinda ESA version for babies
+- DIY Mars Perseverance Rover Replica – Arduino based Project  
+  https://howtomechatronics.com/projects/diy-mars-perseverance-rover-replica-with-arduino/  
+  Probably one of the best and accurate project I've ever seen. Mechanics part is really well detailed and impressive,
+  STL cad files are well engineered and suitable for generic robots too, it's not just for a bare replica but easily
+  adaptable to a generic rover bogie robot.
 - Overall design on Research Gate  
   https://www.researchgate.net/publication/313403109_Design_of_Rocker_Bogie_Mechanism
 - Bunch of designs, each one has good points and ideas:  
