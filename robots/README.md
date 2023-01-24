@@ -72,3 +72,5 @@
   https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/  
   https://dronebotworkshop.com/dc-motors-l298n-h-bridge/  
   https://www.instructables.com/Control-A-DC-Mototr-Using-H-Bridge/
+- RMF/RPM motor calculator  
+  https://www.societyofrobots.com/RMF_calculator.shtml
