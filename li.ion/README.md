@@ -4,6 +4,7 @@ Load Sharing PSU
 - [USB 5V 1A LiPo battery charger with load sharing and protection](https://forum.arduino.cc/t/solved-usb-5v-1a-lipo-battery-charger-with-load-sharing-and-protection/569726)
 - [Design A Load Sharing System Power Path Management with Microchip’s Stand-Alone Li-Ion Battery Charger](https://ww1.microchip.com/downloads/en/AppNotes/01149a.pdf)
 - [Safe charging of Lithium Ion batteries with TP4056](https://www.best-microcontroller-projects.com/tp4056.html)
+- https://www.quora.com/How-do-I-make-a-battery-circuit-in-which-the-battery-charges-when-charging-is-supplied-to-it-but-starts-supplying-the-load-when-the-charging-stops
 
 
 # Shop
