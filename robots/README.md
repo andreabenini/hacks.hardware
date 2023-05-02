@@ -16,6 +16,8 @@
   Navigation software from their autonomous cars biggest brothers, I'm really impressed by them:
   - [The story behind yandex bots](https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589),
   storytelling, no tech details but really fun
+- **OpenBot**  
+  Smartphone + cheap open hardware = https://openbot.org
 
 
 # Walkers
