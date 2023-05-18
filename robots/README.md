@@ -18,6 +18,10 @@
   storytelling, no tech details but really fun
 - **OpenBot**  
   Smartphone + cheap open hardware = https://openbot.org (https://github.com/isl-org/OpenBot)
+- **Guardian Bot**  
+  Cool little robot, ESP32 powered, used as a simple security guard. Some basic concepts are intersting and its compact design is really awesome.
+  It's connected to Home Assistant too:  
+  https://github.com/PricelessToolkit/Smart-Home-Security-Guardian-Bot
 
 
 # Walkers
