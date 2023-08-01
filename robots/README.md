@@ -22,6 +22,9 @@
   Cool little robot, ESP32 powered, used as a simple security guard. Some basic concepts are intersting and its compact design is really awesome.
   It's connected to Home Assistant too:  
   https://github.com/PricelessToolkit/Smart-Home-Security-Guardian-Bot
+- **Mobile robot with a 4DOF arm and an onboard camera**  
+  Arduino project with a mixup of boards: RPi Pico, ESP32/CAM, VNH3ASP30 motor driver  
+  https://blog.arduino.cc/2023/07/18/this-remote-controlled-highly-mobile-robot-features-a-4dof-arm-and-an-onboard-camera/
 
 
 # Walkers
