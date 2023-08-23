@@ -81,5 +81,7 @@
   https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/  
   https://dronebotworkshop.com/dc-motors-l298n-h-bridge/  
   https://www.instructables.com/Control-A-DC-Mototr-Using-H-Bridge/
+- **tb6612fng motor driver, a L298N replacement**  
+  https://www.hackster.io/news/tb6612fng-motor-driver-better-than-the-l298n-7499a7574e63
 - RMF/RPM motor calculator  
   https://www.societyofrobots.com/RMF_calculator.shtml
