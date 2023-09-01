@@ -16,6 +16,11 @@
   Navigation software from their autonomous cars biggest brothers, I'm really impressed by them:
   - [The story behind yandex bots](https://medium.com/yandex-self-driving-car/the-story-behind-the-creation-of-yandexs-delivery-robot-e07017940589),
   storytelling, no tech details but really fun
+- **HP SitePrint**  
+  HP robotic layout robot solution. Quick, accurate and easy construction site layouts from a small robot.
+  Nice idea, sturdy mechanics, interesting robot layout but poor execution in a real construction site (never seen a cleanest building site).
+  Solid mechanic in a compact shaped layout, definitively I can grab some valid ideas from it.  
+  https://www.hp.com/us-en/printers/site-print/layout-robot.html
 - **OpenBot**  
   Smartphone + cheap open hardware = https://openbot.org (https://github.com/isl-org/OpenBot)
 - **Guardian Bot**  
