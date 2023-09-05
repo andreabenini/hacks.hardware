@@ -30,7 +30,9 @@
 - **Mobile robot with a 4DOF arm and an onboard camera**  
   Arduino project with a mixup of boards: RPi Pico, ESP32/CAM, VNH3ASP30 motor driver  
   https://blog.arduino.cc/2023/07/18/this-remote-controlled-highly-mobile-robot-features-a-4dof-arm-and-an-onboard-camera/
-
+- **Watako Lab**  
+  The only problem here is using google translator across the whole site but projects are definitively awesome  
+  http://watako-lab.com/
 
 # Walkers
 - **Build your own robotic cat**<br>
