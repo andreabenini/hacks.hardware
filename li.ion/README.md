@@ -7,6 +7,9 @@ Load Sharing PSU
 - https://www.quora.com/How-do-I-make-a-battery-circuit-in-which-the-battery-charges-when-charging-is-supplied-to-it-but-starts-supplying-the-load-when-the-charging-stops
 - HOWTO: Properly change a battery  
   https://emariete.com/en/co2-meter-with-battery-well-done/
+- PCM, BMS, CMB
+  Really well written thread with samples and references:  
+  https://bitbuilt.net/forums/index.php?threads/building-batteries-with-1-port-play-and-charge.1628/
 
 # Shop
 - [MCP73871 USB 5V DC Power Boost Solar Lipoly Lithium Lon Polymer Charger Board 3.7V/4.2V Battery Management Charger Module](https://www.aliexpress.com/item/1005003281685204.html?spm=a2g0o.productlist.main.7.4ee327b0NTZKRE&algo_pvid=a2144b2a-cc27-446b-b82e-230996614d88&algo_exp_id=a2144b2a-cc27-446b-b82e-230996614d88-3&pdp_npi=3%40dis%21EUR%213.24%212.1%21%21%21%21%21%4021021f7b16829752855763113d076d%2112000025004555403%21sea%21IT%212355064653&curPageLogUid=73VxEWzPYtos)
