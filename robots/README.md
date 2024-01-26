@@ -31,6 +31,8 @@
   Not my favorite but source code is good and the idea is nice, I'll surely get rid of these cheap motors and the small lipo battery for something bigger
   but more reliable.  
   https://www.youtube.com/watch?v=gmqgAcnKeFU&ab_channel=TheWrench
+- **HeRo 2.0: A Low-Cost Robot for Swarm Robotics Research**  
+  https://arxiv.org/pdf/2202.12391.pdf
 - **Mobile robot with a 4DOF arm and an onboard camera**  
   Arduino project with a mixup of boards: RPi Pico, ESP32/CAM, VNH3ASP30 motor driver  
   https://blog.arduino.cc/2023/07/18/this-remote-controlled-highly-mobile-robot-features-a-4dof-arm-and-an-onboard-camera/
