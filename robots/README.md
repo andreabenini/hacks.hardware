@@ -40,6 +40,12 @@
   The only problem here is using google translator across the whole site but projects are definitively awesome  
   http://watako-lab.com/
 
+# Desktop companions
+- **Dodge - ESP32 Cam Based Tripod**
+  This funny device is a  sort of companion with a cam, building process is really well documented and mechanics it's solid too. It's motion might be maybe
+  limited but the mechanics is excellent.  
+  https://www.instructables.com/Dodge-ESP32-Cam-Based-Tripod/?utm_source=newsletter&utm_medium=email
+
 # Walkers
 - **Build your own robotic cat**<br>
   Awesome open source project with reliable body and quite good design, Arduino controlled board could be replaced with a
