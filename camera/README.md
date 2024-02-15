@@ -16,3 +16,7 @@
         - https://hackaday.com/2018/10/23/hack-my-house-zoneminders-keeping-an-eye-on-the-place/#more-327405
 - Enhancing ordinary IP security cameras with AI
     - https://harizanov.com/2018/03/enhancing-my-ordinary-security-cameras-with-ai/
+
+
+# ESP-Cam related projects
+- https://github.com/jameszah/ESP32-CAM-Video-Recorder-junior
