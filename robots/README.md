@@ -39,6 +39,10 @@
 - **Watako Lab**  
   The only problem here is using google translator across the whole site but projects are definitively awesome  
   http://watako-lab.com/
+- **Doly**
+  Open robot project based on Raspberry PI CM4, simple and outstanding chassis and mechanics  
+  https://github.com/robotdoly/
+
 
 # Desktop companions
 - **Dodge - ESP32 Cam Based Tripod**
