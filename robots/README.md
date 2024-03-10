@@ -42,6 +42,9 @@
 - **Doly**
   Open robot project based on Raspberry PI CM4, simple and outstanding chassis and mechanics  
   https://github.com/robotdoly/
+- **3D Dog Robot**  
+  Multiple Servo Motor Control Board. Arduino+ESP8266  
+  https://www.instructables.com/Explore-Simple-3D-Dog-Robot-and-Multiple-Servo-Mot/?utm_source=newsletter&utm_medium=email
 
 
 # Desktop companions
