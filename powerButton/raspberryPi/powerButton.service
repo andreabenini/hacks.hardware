@@ -1,0 +1,15 @@
+# powerButton service file, start a daemon on startup
+# file: /etc/systemd/system/powerButton.service
+#
+# Copy to /storage/.config/system.d/
+# systemctl enable powerButton
+#
+[Unit]
+Description=Power button shutdown daemon
+
+[Service]
+RemainAfterExit=true
+ExecStart=/storage/powerButton/powerButton.py
+
+[Install]
+WantedBy=multi-user.target
