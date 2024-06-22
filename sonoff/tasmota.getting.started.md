@@ -111,3 +111,7 @@ you're doing things fine you'll probably see it connected to your backbone.
 
 That's it.
 
+
+# Additional firmware and resources:
+- https://ota.tasmota.com/tasmota/
+- https://github.com/arendst/Tasmota
