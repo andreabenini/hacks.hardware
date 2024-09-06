@@ -47,8 +47,15 @@
   https://www.instructables.com/Explore-Simple-3D-Dog-Robot-and-Multiple-Servo-Mot/?utm_source=newsletter&utm_medium=email
 - **MiniSkidi - 3D Printed RC SkidSteer**  
   Small and cutie bobcat like mini robot. Robust and nice hw design, really simple sw part based 
-  on arduino. Controllable from your mobile phone with a simple, generic and free app: Dabble. Available for Android and MacOS
-  - Video https://www.youtube.com/watch?v=3jgQ9fDi1nY
+  on arduino. Controllable from your mobile phone with a simple, generic and free app: Dabble. Available for Android and iOS.
+  - Presentation video https://www.youtube.com/watch?v=3jgQ9fDi1nY
+  - Software repository (arduino based) https://github.com/ProfBoots/MiniSkidi/tree/main, compatible with
+    mobile phone Dabble client
+  - Bluetooth client controller software. Using Dabble for it
+    - Intro https://ai.thestempedia.com/docs/dabble-app/getting-started-with-dabble/
+    - Dabble sources https://github.com/STEMpedia/Dabble
+    - Android application https://play.google.com/store/apps/details?id=io.dabbleapp
+    - iOS application https://apps.apple.com/us/app/dabble-bluetooth-controller/id1472734455
 
 
 # Desktop companions
