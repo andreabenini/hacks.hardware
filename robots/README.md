@@ -45,6 +45,10 @@
 - **3D Dog Robot**  
   Multiple Servo Motor Control Board. Arduino+ESP8266  
   https://www.instructables.com/Explore-Simple-3D-Dog-Robot-and-Multiple-Servo-Mot/?utm_source=newsletter&utm_medium=email
+- **MiniSkidi - 3D Printed RC SkidSteer**  
+  Small and cutie bobcat like mini robot. Robust and nice hw design, really simple sw part based 
+  on arduino. Controllable from your mobile phone with a simple, generic and free app: Dabble. Available for Android and MacOS
+  - Video https://www.youtube.com/watch?v=3jgQ9fDi1nY
 
 
 # Desktop companions
