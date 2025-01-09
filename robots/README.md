@@ -56,6 +56,10 @@
     - Dabble sources https://github.com/STEMpedia/Dabble
     - Android application https://play.google.com/store/apps/details?id=io.dabbleapp
     - iOS application https://apps.apple.com/us/app/dabble-bluetooth-controller/id1472734455
+- **3D Printed Fish Feeder RC Boat With Controller**  
+RC Boat using classic 2 motors scheme, ESP32C3 and minimal specs. ESP-NOW protocol and complete design for the
+transmitter part too, well documented and source code available.  
+https://www.instructables.com/3D-Printed-Fish-Feeder-RC-Boat-With-Controller/
 
 
 # Desktop companions
