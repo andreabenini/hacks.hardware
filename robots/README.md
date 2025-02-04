@@ -62,6 +62,12 @@ transmitter part too, well documented and source code available.
 https://www.instructables.com/3D-Printed-Fish-Feeder-RC-Boat-With-Controller/
 
 
+# Gamepads
+- some kind of ESP32 gamepad, seems to be a viable choice for controlling robots and other appliances. It's unfortunately based
+  on the Arduino stack so no direct optimizations with ESP-IDF libraries are possible withouth Arduino libs:  
+  https://github.com/lemmingDev/ESP32-BLE-Gamepad
+
+
 # Desktop companions
 - **Dodge - ESP32 Cam Based Tripod**
   This funny device is a  sort of companion with a cam, building process is really well documented and mechanics it's solid too. It's motion might be maybe
