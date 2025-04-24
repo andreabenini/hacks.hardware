@@ -1,8 +1,18 @@
 /*
- * SPDX-FileCopyrightText: 2021-2022 Espressif Systems (Shanghai) CO LTD
+ * This file is part of andreabenini/hacks.hardware repository.
  *
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2025 Andrea Benini
+ *
+ * This software is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
+ * and includes the following additional restriction:
+ *
+ * - The licensee is explicitly prohibited from using this software or code in any product or service that is offered for a fee,
+ *   or deployed and utilized on public cloud infrastructure (including, but not limited to, AWS, Google Cloud Platform,
+ *   Microsoft Azure, and similar platforms) without explicit written permission from the author.
+ *
+ * To view a copy of the CC BY-NC-SA 4.0 license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
  */
+
  #include <string.h>
  #include <stdio.h>
  #include "sdkconfig.h"
