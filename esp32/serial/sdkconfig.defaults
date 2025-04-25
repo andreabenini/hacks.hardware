@@ -1,0 +1,13 @@
+#
+# ESP32 options
+#
+# Enable Serial Console:
+#       Component config > ESP System Settings > Channel for console output > choose USB Serial/JTAG Controller
+#
+
+# as alternative for sdkconfig it's also possible to define these values manually
+# Just provide these lines in your sdkconfig.defaults:
+
+# UART Specifications, enable UART R/W options
+#CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
