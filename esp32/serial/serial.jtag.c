@@ -21,6 +21,9 @@
  *                #CONFIG_ESP_CONSOLE_UART_DEFAULT=y
  *                CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
  */
+/**
+ * As a bonus point this sample is provided as a standalone task, it's easy to integrate in something else
+ */
 #include <stdio.h>
 #include <string.h>
 #include "freertos/FreeRTOS.h"              // IWYU pragma: keep
