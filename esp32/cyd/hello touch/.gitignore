@@ -1,0 +1,17 @@
+# Build output
+build/
+managed_components/
+
+# ESP-IDF
+sdkconfig.old
+dependencies.lock
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
