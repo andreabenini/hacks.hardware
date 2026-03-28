@@ -12,6 +12,3 @@ dependencies.lock
 *.swo
 *~
 
-# OS
-.DS_Store
-Thumbs.db
