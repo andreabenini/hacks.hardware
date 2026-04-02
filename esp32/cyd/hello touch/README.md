@@ -69,3 +69,25 @@ I (xxx) demotest: Touch #1: X=160, Y=120, Strength=1234
 I (xxx) demotest: Touch #2: X=200, Y=150, Strength=2345
 ```
 
+
+## Hardware Configuration
+### Pin Mapping
+| Display (ILI9341) | SPI2     |
+|-------------------|----------|
+| **Pin**           | **GPIO** |
+| SCLK              |       14 |
+| MOSI              |       13 |
+| MISO              |       12 |
+| CS                |       15 |
+| DC                |        2 |
+| Backlight         |       21 |
+
+| Touch (XPT2046)   | SPI3     |
+|-------------------|----------|
+| **Pin**           | **GPIO** |
+| SCLK              |       25 |
+| MOSI              |       32 |
+| MISO              |       39 |
+| CS                |       33 |
+| IRQ               |       36 |
+
