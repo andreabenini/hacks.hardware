@@ -31,3 +31,26 @@ hello_cyd/
 └── docs/
     └── DISPLAY_CONFIG.md       # Hardware reference
 ```
+
+
+## Quick Start
+
+### Prerequisites
+- ESP-IDF 5.x installed
+- CYD hardware (ESP32, ILI9341, XPT2046)
+
+### Build & Flash
+During the first build all dependencies (LVGL, ILI9341 driver) will automatically be downloaded
+from `idf_component.yml`.
+  ```sh
+  # Set environment
+  . $IDF_PATH/export.sh
+
+  # Build
+  cd hello_cyd
+  idf.py build
+
+  # Flash (adjust port if needed)
+  idf.py -p /dev/ttyUSB0 flash monitor
+  ```
+
