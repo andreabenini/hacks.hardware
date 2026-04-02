@@ -91,3 +91,15 @@ I (xxx) demotest: Touch #2: X=200, Y=150, Strength=2345
 | CS                |       33 |
 | IRQ               |       36 |
 
+### Critical Settings
+**These settings in `sdkconfig` are CRITICAL:**
+```
+CONFIG_LV_COLOR_DEPTH_16=y
+CONFIG_LV_COLOR_16_SWAP=y    # Must be enabled for correct colors!
+```
+**In `main.c`:**
+```c
+.rgb_ele_order = LCD_RGB_ELEMENT_ORDER_RGB        // NOT BGR!
+esp_lcd_panel_invert_color(panel_handle, false)   // NO inversion
+```
+See `docs/DISPLAY_CONFIG.md` for complete details
