@@ -54,3 +54,18 @@ from `idf_component.yml`.
   idf.py -p /dev/ttyUSB0 flash monitor
   ```
 
+
+## Program overview
+**On the display:**
+- Black background
+- White title: "DemoTest - Touch Test"
+- Gray text: "Touch the screen to test"
+- Green coordinates (updates when touched)
+- Yellow counter (increments on touch)
+
+**On serial monitor:**
+```
+I (xxx) demotest: Touch #1: X=160, Y=120, Strength=1234
+I (xxx) demotest: Touch #2: X=200, Y=150, Strength=2345
+```
+
