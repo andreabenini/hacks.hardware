@@ -16,4 +16,18 @@ A minimal "Hello World" for CYD hardware that demonstrates:
 
 **Use this as a starting point for any CYD-based project!**
 
----
+
+## Project structure
+```txt
+hello_cyd/
+├── CMakeLists.txt              # Root project file
+├── sdkconfig                   # ESP-IDF config (color settings)
+├── main/
+│   ├── CMakeLists.txt          # Main component
+│   ├── idf_component.yml       # Dependencies (LVGL, ILI9341, etc.)
+│   └── main.c                  # Touch test application
+├── components/
+│   └── esp_lcd_touch_xpt2046/  # Touch driver (complete)
+└── docs/
+    └── DISPLAY_CONFIG.md       # Hardware reference
+```
