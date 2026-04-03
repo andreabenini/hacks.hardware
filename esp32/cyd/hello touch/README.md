@@ -119,3 +119,10 @@ lv_obj_set_style_text_color(g_coord_label, lv_color_hex(0x00FF00), 0);  // Green
 Edit `main.c` if your hardware uses different pins.
 ### Add Your Code
 The LVGL UI is created in `app_main()`. Add your widgets there!
+
+
+## Documentation
+- **`docs/DISPLAY_CONFIG.md`** - Complete hardware reference
+  - Pin configurations
+  - Color settings troubleshooting
+  - What we tried and what works
