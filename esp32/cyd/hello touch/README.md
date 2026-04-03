@@ -103,3 +103,19 @@ CONFIG_LV_COLOR_16_SWAP=y    # Must be enabled for correct colors!
 esp_lcd_panel_invert_color(panel_handle, false)   // NO inversion
 ```
 See `docs/DISPLAY_CONFIG.md` for complete details
+
+
+## Customization
+### Change Colors
+Edit `main.c` around line 240:
+```c
+// Background
+lv_obj_set_style_bg_color(scr, lv_color_hex(0x000000), 0);              // Black
+// Text colors
+lv_obj_set_style_text_color(title, lv_color_hex(0xFFFFFF), 0);          // White
+lv_obj_set_style_text_color(g_coord_label, lv_color_hex(0x00FF00), 0);  // Green
+```
+### Change Pin Mapping
+Edit `main.c` if your hardware uses different pins.
+### Add Your Code
+The LVGL UI is created in `app_main()`. Add your widgets there!
