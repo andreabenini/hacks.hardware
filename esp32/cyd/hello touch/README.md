@@ -120,9 +120,25 @@ Edit `main.c` if your hardware uses different pins.
 ### Add Your Code
 The LVGL UI is created in `app_main()`. Add your widgets there!
 
-
 ## Documentation
 - **`docs/DISPLAY_CONFIG.md`** - Complete hardware reference
   - Pin configurations
   - Color settings troubleshooting
   - What we tried and what works
+
+
+## Troubleshooting
+- Colors are wrong (red appears blue)  
+  **Fix:** Check `sdkconfig` has `CONFIG_LV_COLOR_16_SWAP=y`
+- Display is inverted (light when should be dark)  
+  **Fix:** Check `main.c` has `esp_lcd_panel_invert_color(panel_handle, false)`
+- Touch not responding  
+  **Fix:** Verify touch uses SPI3 (different bus than display!)
+- Build fails - missing LVGL  
+  **Fix:** Delete `build/` and `managed_components/`, then rebuild. Dependencies will re-download.
+
+
+## External links
+- **LVGL Documentation:** https://docs.lvgl.io/8.3/
+- **ESP-IDF Documentation:** https://docs.espressif.com/projects/esp-idf/
+
