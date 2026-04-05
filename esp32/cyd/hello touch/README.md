@@ -142,3 +142,10 @@ The LVGL UI is created in `app_main()`. Add your widgets there!
 - **LVGL Documentation:** https://docs.lvgl.io/8.3/
 - **ESP-IDF Documentation:** https://docs.espressif.com/projects/esp-idf/
 
+
+## Template project
+Copy `hello_cyd/` and build on top of it, this project is a clean starting point for:
+- Smart displays
+- Touch interfaces
+- IoT dashboards
+- Any CYD-based project!
