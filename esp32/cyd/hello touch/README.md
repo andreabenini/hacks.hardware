@@ -149,3 +149,10 @@ Copy `hello_cyd/` and build on top of it, this project is a clean starting point
 - Touch interfaces
 - IoT dashboards
 - Any CYD-based project!
+
+
+## General notes
+- Uses **two separate SPI buses** (SPI2 for LCD, SPI3 for touch)
+- LVGL byte swap required for ILI9341
+- Tested with ESP-IDF 5.5.3 and LVGL 8.4.0
+- Black background (`#000000`) works best for this display
