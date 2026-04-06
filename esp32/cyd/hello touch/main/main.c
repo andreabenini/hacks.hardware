@@ -14,7 +14,7 @@
 #include "esp_lcd_touch_xpt2046.h"
 #include "lvgl.h"
 
-static const char *TAG = "keymaker";
+static const char *TAG = "demotest";
 
 // Display SPI pins (from host-monitor.yaml)
 #define LCD_HOST               SPI2_HOST
@@ -113,7 +113,7 @@ static void lvgl_task(void *pvParameter)
 
 void app_main(void)
 {
-    ESP_LOGI(TAG, "Keymaker - LVGL Hello World");
+    ESP_LOGI(TAG, "DemoTest - LVGL Hello World");
 
     // Initialize backlight
     gpio_config_t bk_gpio_config = {
@@ -250,7 +250,7 @@ void app_main(void)
 
         // Create a title label
         lv_obj_t *title = lv_label_create(scr);
-        lv_label_set_text(title, "Keymaker - Touch Test");
+        lv_label_set_text(title, "DemoTest - Touch Test");
         lv_obj_set_style_text_color(title, lv_color_hex(0xFFFFFF), 0);  // White
         lv_obj_set_style_text_font(title, &lv_font_montserrat_14, 0);
         lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 10);
