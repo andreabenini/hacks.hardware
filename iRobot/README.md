@@ -1,1 +1,4 @@
-
+- https://github.com/koalazak/dorita980
+- https://github.com/koalazak/rest980
+- https://github.com/NickWaterton/Roomba980-Python
+- https://github.com/pschmitt/roombapy
