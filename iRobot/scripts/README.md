@@ -19,3 +19,6 @@ Modern Linux distributions use OpenSSL 3.0, which disables legacy renegotiation 
    python3 -m venv venv
    ./venv/bin/pip install 'paho-mqtt<2.0.0'
    ```
+2. The scripts automatically apply `openssl_legacy.cnf` located in this folder to allow the handshake without system-wide changes.
+
+
