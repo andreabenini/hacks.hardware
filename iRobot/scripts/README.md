@@ -22,3 +22,9 @@ Modern Linux distributions use OpenSSL 3.0, which disables legacy renegotiation 
 2. The scripts automatically apply `openssl_legacy.cnf` located in this folder to allow the handshake without system-wide changes.
 
 
+## End-to-End Onboarding Procedure
+### Step A: Reset and Start SoftAP
+1. Place the Roomba on or off the Home Base.
+2. Hold **Dock + Spot + Clean** for 10–15s until all lights turn on, then release to factory reset.
+3. Wake it up with **CLEAN**.
+4. Hold **Dock + Spot** for ~3 seconds until the chime sounds and the Wi-Fi icon flashes green.
