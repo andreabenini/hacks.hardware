@@ -28,3 +28,15 @@ Modern Linux distributions use OpenSSL 3.0, which disables legacy renegotiation 
 2. Hold **Dock + Spot + Clean** for 10–15s until all lights turn on, then release to factory reset.
 3. Wake it up with **CLEAN**.
 4. Hold **Dock + Spot** for ~3 seconds until the chime sounds and the Wi-Fi icon flashes green.
+
+### Step B: Connect Host to Roomba SoftAP
+1. Turn on your PC Wi-Fi and scan networks:
+   ```sh
+   nmcli dev wifi list
+   ```
+   Look for `Roomba-<BLID>` (e.g. `Roomba-31C7C41492137830`).
+2. Connect your Wi-Fi interface to the Roomba:
+   ```sh
+   nmcli dev wifi connect Roomba-<BLID> ifname <wifi_interface>
+   ```
+   The Roomba assigns your host IP `192.168.10.2` via DHCP; the robot is `192.168.10.1`.
