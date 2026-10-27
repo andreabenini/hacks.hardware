@@ -34,9 +34,19 @@ Modern Linux distributions use OpenSSL 3.0, which disables legacy renegotiation 
    ```sh
    nmcli dev wifi list
    ```
-   Look for `Roomba-<BLID>` (e.g. `Roomba-31C7C41492137830`).
+   Look for `Roomba-<BLID>` (e.g. `Roomba-92B5A36401234567`).
 2. Connect your Wi-Fi interface to the Roomba:
    ```sh
    nmcli dev wifi connect Roomba-<BLID> ifname <wifi_interface>
    ```
    The Roomba assigns your host IP `192.168.10.2` via DHCP; the robot is `192.168.10.1`.
+
+### Step C: Provision Wi-Fi Credentials
+Run `provision_wifi.py`:
+```sh
+./venv/bin/python3 provision_wifi.py
+```
+- It prompts interactively for target 2.4 GHz SSID and Wi-Fi password (or pass `-s SSID -p PASSWORD`).
+- It generates a valid local MQTT password (`:1:timestamp:16_chars`), registers it with the robot, and sends the Wi-Fi profile over MQTT topics `delta` and `wifictl`.
+- The Roomba disables its SoftAP (`uap: false`) and connects to your home Wi-Fi.
+
