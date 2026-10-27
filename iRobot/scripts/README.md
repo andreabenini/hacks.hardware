@@ -50,3 +50,15 @@ Run `provision_wifi.py`:
 - It generates a valid local MQTT password (`:1:timestamp:16_chars`), registers it with the robot, and sends the Wi-Fi profile over MQTT topics `delta` and `wifictl`.
 - The Roomba disables its SoftAP (`uap: false`) and connects to your home Wi-Fi.
 
+### Step D: Reconnect Host & Confirm LAN Access
+1. Reconnect your host Wi-Fi back to your home network:
+   ```sh
+   nmcli dev wifi connect <YOUR_HOME_SSID> ifname <wifi_interface>
+   ```
+2. Check `CREDENTIALS.txt` for the assigned password and BLID.
+3. Verify connection with `check_status.py`:
+   ```bash
+   ./venv/bin/python3 check_status.py
+   ```
+
+
