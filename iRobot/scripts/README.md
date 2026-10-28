@@ -61,4 +61,14 @@ Run `provision_wifi.py`:
    ./venv/bin/python3 check_status.py
    ```
 
+## Retrieving the Password Later (If Already on LAN)
+If the robot is already on your Wi-Fi and you just need its password:
+- Ensure the robot is docked and awake
+- Run `get_password.py`:
+   ```sh
+   ./venv/bin/python3 get_password.py
+   ```
+- When prompted, press and hold **Dock / Home** for 2 seconds until the chime plays and Wi-Fi blinks. The script will capture and display the password
+
+
 
