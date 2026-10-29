@@ -79,3 +79,10 @@ Use `manage_roomba.py` to inspect and configure them:
 ./venv/bin/python3 manage_roomba.py --get
 ```
 
+### Set Cleaning Passes:
+```sh
+./venv/bin/python3 manage_roomba.py --passes 1      # 1 single pass
+./venv/bin/python3 manage_roomba.py --passes 2      # 2 passes
+./venv/bin/python3 manage_roomba.py --passes auto   # Automatic
+```
+
