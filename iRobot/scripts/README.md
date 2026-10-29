@@ -71,4 +71,11 @@ If the robot is already on your Wi-Fi and you just need its password:
 - When prompted, press and hold **Dock / Home** for 2 seconds until the chime plays and Wi-Fi blinks. The script will capture and display the password
 
 
+## Setting Preferences & Controlling from CLI
+All operational preferences normally adjusted in the mobile app are MQTT JSON deltas published to topic `delta` or commands sent to topic `cmd`.  
+Use `manage_roomba.py` to inspect and configure them:
+### View Current Settings:
+```sh
+./venv/bin/python3 manage_roomba.py --get
+```
 
