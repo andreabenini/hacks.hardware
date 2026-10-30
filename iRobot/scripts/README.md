@@ -91,3 +91,9 @@ Use `manage_roomba.py` to inspect and configure them:
 ./venv/bin/python3 manage_roomba.py --edge-clean on
 ./venv/bin/python3 manage_roomba.py --edge-clean off
 ```
+
+### Configure Bin Behavior:
+```sh
+./venv/bin/python3 manage_roomba.py --bin-pause on   # Pause mission when bin fills up
+./venv/bin/python3 manage_roomba.py --bin-pause off  # Keep cleaning until finished
+```
