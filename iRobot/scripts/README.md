@@ -86,3 +86,8 @@ Use `manage_roomba.py` to inspect and configure them:
 ./venv/bin/python3 manage_roomba.py --passes auto   # Automatic
 ```
 
+### Toggle Edge Cleaning:
+```sh
+./venv/bin/python3 manage_roomba.py --edge-clean on
+./venv/bin/python3 manage_roomba.py --edge-clean off
+```
