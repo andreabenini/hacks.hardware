@@ -97,3 +97,14 @@ Use `manage_roomba.py` to inspect and configure them:
 ./venv/bin/python3 manage_roomba.py --bin-pause on   # Pause mission when bin fills up
 ./venv/bin/python3 manage_roomba.py --bin-pause off  # Keep cleaning until finished
 ```
+
+### Send Vacuum Commands:
+All of these are high level commands like: _clean, pause, return to base_.  
+It's not possible to send specific commands for controlling motors (forward, backward, left, right)
+without serious hardware hacking or direct access to motherboard console
+```sh
+./venv/bin/python3 manage_roomba.py --cmd start     # Start cleaning
+./venv/bin/python3 manage_roomba.py --cmd pause     # Pause
+./venv/bin/python3 manage_roomba.py --cmd dock      # Return to home base
+./venv/bin/python3 manage_roomba.py --cmd find      # Play sound to locate
+```
