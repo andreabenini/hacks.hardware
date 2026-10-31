@@ -108,3 +108,13 @@ without serious hardware hacking or direct access to motherboard console
 ./venv/bin/python3 manage_roomba.py --cmd dock      # Return to home base
 ./venv/bin/python3 manage_roomba.py --cmd find      # Play sound to locate
 ```
+
+
+## Home Assistant Integration
+Use the native **iRobot Roomba and Braava** integration in Home Assistant:
+1. Go to **Settings -> Devices & Services -> Add Integration -> iRobot Roomba**.
+2. Enter the parameters from `CREDENTIALS.txt`:
+   - **Host:** Your fixed or DHCP reserved IP address
+   - **BLID:** `11B1D11123456789`
+   - **Password:** `:1:1234567890:1k23Ar9xrsUh43jd` (the entire string including `:1:...`)
+3. Recommended router setting: assign a static DHCP lease to MAC `00:11:22:33:44:55`.
