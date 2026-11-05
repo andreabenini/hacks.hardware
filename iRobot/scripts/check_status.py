@@ -1,8 +1,37 @@
+#!/usr/bin/env python3
+import os
+import sys
+
+# Ensure OpenSSL legacy renegotiation configuration is loaded
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+CONF_PATH = os.path.join(SCRIPT_DIR, "openssl_legacy.cnf")
+if os.path.exists(CONF_PATH) and os.environ.get("OPENSSL_CONF") != CONF_PATH:
+    os.environ["OPENSSL_CONF"] = CONF_PATH
+    os.execv(sys.executable, [sys.executable] + sys.argv)
+
+import argparse
+import json
+import ssl
+import time
+import paho.mqtt.client as mqtt
+
+def parse_credentials():
+    creds = {}
+    cred_file = os.path.join(SCRIPT_DIR, "CREDENTIALS.txt")
+    if os.path.exists(cred_file):
+        with open(cred_file, "r") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    creds[k.strip()] = v.strip()
+    return creds
+
 def main():
     creds = parse_credentials()
     parser = argparse.ArgumentParser(description="Check Roomba battery and mission status via MQTT")
-    parser.add_argument("-i", "--ip", default=creds.get("IP", "192.168.0.118"), help="Roomba IP")
-    parser.add_argument("-b", "--blid", default=creds.get("BLID", "31C7C41492137830"), help="Roomba BLID")
+    parser.add_argument("-i", "--ip", default=creds.get("IP", "192.168.0.222"), help="Roomba IP")
+    parser.add_argument("-b", "--blid", default=creds.get("BLID", "1199999999666620"), help="Roomba BLID")
     parser.add_argument("-p", "--password", default=creds.get("PASSWORD", ""), help="Roomba Password")
     args = parser.parse_args()
     if not args.password:
