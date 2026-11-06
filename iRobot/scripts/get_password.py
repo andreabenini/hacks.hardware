@@ -24,7 +24,6 @@ def discover_roomba():
     s.settimeout(4)
     s.bind(("", 5678))
     s.sendto(b"irobotmcs", ("255.255.255.255", 5678))
-    
     robots = []
     start = time.time()
     while time.time() - start < 4:
@@ -43,11 +42,9 @@ def fetch_password(ip, timeout=60):
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
     ctx.set_ciphers("AES128-SHA256:@SECLEVEL=0")
-
     print(f"\n[!] Ensure Roomba is on its Home Base and awake.")
     print(f"[!] Press and hold the HOME button on the robot for ~2 seconds until you hear a chime.")
     print(f"Waiting for Roomba response at {ip}:8883...")
-
     deadline = time.time() + timeout
     while time.time() < deadline:
         try:
@@ -56,7 +53,6 @@ def fetch_password(ip, timeout=60):
             wrapped = ctx.wrap_socket(sock)
             wrapped.connect((ip, 8883))
             wrapped.sendall(REQ)
-
             resp = b""
             while len(resp) < 37:
                 chunk = wrapped.recv(1024)
@@ -64,7 +60,6 @@ def fetch_password(ip, timeout=60):
                     break
                 resp += chunk
             wrapped.close()
-
             if len(resp) > 7 and resp[0] == 0xf0 and resp[6] == 0x00:
                 pwd = resp[7:].decode("ascii", errors="ignore")
                 if "\x00" in pwd:
@@ -75,11 +70,11 @@ def fetch_password(ip, timeout=60):
         time.sleep(1)
     return None
 
+
 def main():
     parser = argparse.ArgumentParser(description="Query Roomba local MQTT password while HOME button is pressed")
     parser.add_argument("-i", "--ip", help="Roomba IP on LAN (auto-discovered if not provided)")
     args = parser.parse_args()
-
     ip = args.ip
     if not ip:
         robots = discover_roomba()
@@ -91,7 +86,6 @@ def main():
             print(f" [{idx}] {info.get('robotname', 'Roomba')} - IP: {rip} - BLID: {info.get('hostname')}")
         ip = robots[0][0]
         print(f"Selecting {ip}")
-
     pwd = fetch_password(ip)
     if pwd:
         print("\n" + "="*50)
@@ -103,6 +97,7 @@ def main():
     else:
         print("\nTimed out waiting for HOME button pairing signal.")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
