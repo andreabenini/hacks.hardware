@@ -45,6 +45,83 @@ def create_client(blid, password):
     return client
 
 
+# Robot reports installed voice languages as [{"en-UK": 0}, {"fr-FR": 1}, ...]
+def available_languages(state):
+    langs = {}
+    for entry in state.get("langs", []):
+        if isinstance(entry, dict):
+            langs.update(entry)
+    return langs
+
+
+# Map the reported "language" index back to its locale code
+def current_language(state):
+    index = state.get("language")
+    for code, i in available_languages(state).items():
+        if i == index:
+            return code
+    return None if index is None else f"index {index}"
+
+
+# Accept a full code (de-DE) or just the language part (de), case-insensitive
+def resolve_language(requested, langs):
+    req = requested.lower()
+    exact = [c for c in langs if c.lower() == req]
+    if exact:
+        return exact[0]
+    matches = [c for c in langs if c.lower().split("-")[0] == req]
+    if len(matches) == 1:
+        return matches[0]
+    if matches:
+        raise ValueError(f"'{requested}' is ambiguous: {', '.join(matches)}")
+    raise ValueError(f"'{requested}' not available. Installed: {', '.join(langs) or 'none reported'}")
+
+
+# Report available languages
+def print_languages(state):
+    langs = available_languages(state)
+    current = current_language(state)
+    print(f"Current Language:  {current or 'N/A'}")
+    print("Available:")
+    for code, i in sorted(langs.items(), key=lambda kv: kv[1]):
+        marker = "*" if code == current else " "
+        print(f"  {marker} {code}")
+
+
+# Print roomba configuration
+def print_configuration(state):
+    print("\n=== Current Roomba Configuration ===")
+    # Passes
+    no_auto = state.get("noAutoPasses")
+    two_pass = state.get("twoPass")
+    if no_auto is False:
+        passes_str = "Auto"
+    elif two_pass is True:
+        passes_str = "2 Passes"
+    else:
+        passes_str = "1 Pass"
+    print(f"Cleaning Passes:   {passes_str}")
+    # Edge Clean
+    print(f"Edge Clean:        {'Disabled' if state.get('openOnly') is True else 'Enabled'}")
+    # Bin Pause
+    print(f"Pause on Bin Full: {'Yes' if state.get('binPause') is True else 'No (Always Finish)'}")
+    # Carpet Boost
+    if "carpetBoost" in state:
+        if state.get("carpetBoost"):
+            boost = "Auto"
+        elif state.get("vacHigh"):
+            boost = "Performance"
+        else:
+            boost = "Eco"
+        print(f"Carpet Boost:      {boost}")
+    print(f"Language:          {current_language(state) or 'N/A'}")
+    print(f"Battery Level:     {state.get('batPct', 'N/A')}%")
+    cms = state.get("cleanMissionStatus", {})
+    print(f"Current Phase:     {cms.get('phase', 'N/A')}")
+    print(f"Current Cycle:     {cms.get('cycle', 'N/A')}")
+
+
+# MAIN #
 def main():
     # Read --robot first so the chosen credentials file provides the defaults below
     pre = argparse.ArgumentParser(add_help=False)
@@ -53,6 +130,7 @@ def main():
     creds = parse_credentials(known.robot)
 
     parser = argparse.ArgumentParser(description="Manage Roomba preferences and commands over MQTT")
+    parser.add_argument("--robot", default=DEFAULT_CREDENTIALS, help=f"Credentials file (default: {DEFAULT_CREDENTIALS})")
     parser.add_argument("-i", "--ip", default=creds.get("IP", "192.168.0.118"), help="Roomba IP")
     parser.add_argument("-b", "--blid", default=creds.get("BLID", ""), help="Roomba BLID")
     parser.add_argument("-p", "--password", default=creds.get("PASSWORD", ""), help="Roomba Password")
@@ -63,6 +141,7 @@ def main():
     parser.add_argument("--edge-clean", choices=["on", "off"], help="Edge cleaning: on or off")
     parser.add_argument("--bin-pause", choices=["on", "off"], help="Pause when bin is full: on or off")
     parser.add_argument("--carpet-boost", choices=["auto", "performance", "eco"], help="Carpet boost mode")
+    parser.add_argument("--language", nargs="?", const="", metavar="CODE", help="Without a value: list languages. With a value (e.g. de, fr-FR): switch voice language")
     # Commands
     parser.add_argument("--cmd", choices=["start", "pause", "stop", "resume", "dock", "find"], help="Send command to Roomba")
     args = parser.parse_args()
@@ -88,7 +167,6 @@ def main():
     required = {"cleanMissionStatus", "noAutoPasses"}
     if args.language is not None:
         required |= {"language", "langs"}
-
     client = create_client(args.blid, args.password)
     client.on_connect = on_connect
     client.on_message = on_message
@@ -105,6 +183,17 @@ def main():
     start = time.time()
     while time.time() - start < 5 and not required <= state.keys() and connack.get("rc", 0) == 0:
         time.sleep(0.3)
+    # Non-zero CONNACK: broker reachable but credentials rejected
+    if connack.get("rc", 0) != 0:
+        client.loop_stop()
+        print(f"Error: {mqtt.connack_string(connack['rc'])} - check BLID/PASSWORD in {args.robot}")
+        sys.exit(1)
+
+    def finish(code=0):
+        client.loop_stop()
+        client.disconnect()
+        sys.exit(code)
+
     delta_state = {}
     if args.passes == "1":
         delta_state.update({"noAutoPasses": True, "twoPass": False})
@@ -130,6 +219,20 @@ def main():
     elif args.carpet_boost == "eco":
         delta_state.update({"carpetBoost": False, "vacHigh": False})
 
+    # Language: resolve the requested code to the robot's index
+    if args.language:
+        langs = available_languages(state)
+        if not langs:
+            print("Error: robot did not report its installed languages")
+            finish(1)
+        try:
+            code = resolve_language(args.language, langs)
+        except ValueError as e:
+            print(f"Error: {e}")
+            finish(1)
+        delta_state["language"] = langs[code]
+        print(f"Switching language: {current_language(state) or 'N/A'} -> {code}")
+
     # Apply preference updates
     if delta_state:
         payload = json.dumps({"state": delta_state})
@@ -147,6 +250,13 @@ def main():
         print(f"Sending command to topic 'cmd': {cmd_payload}")
         client.publish("cmd", cmd_payload)
         time.sleep(1)
+
+    # --language without a value: list current and installed languages
+    if args.language == "":
+        if "langs" not in state:
+            print("Error: robot did not report its installed languages")
+            finish(1)
+        print_languages(state)
 
     # Show preferences if requested or if no arguments given
     if args.get or (not delta_state and not args.cmd and args.language is None):
