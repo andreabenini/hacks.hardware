@@ -21,12 +21,14 @@ import time
 import argparse
 import paho.mqtt.client as mqtt
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-log = logging.getLogger("RoombaProvision")
 
 HOST = "192.168.10.1"
 PORT = 8883
 MAGIC = bytes.fromhex("efcc3b2900")
+
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+log = logging.getLogger("RoombaProvision")
 
 def create_ssl_context():
     ctx = ssl.create_default_context()
@@ -58,7 +60,6 @@ def provision_password(password_str):
         if not chunk:
             break
         resp += chunk
-
     wrapped.close()
     if len(resp) < 7:
         raise RuntimeError("Response too short from Roomba")
@@ -73,14 +74,11 @@ def provision_wifi(blid, wifi_ssid, wifi_psk, roomba_pwd, timezone="Europe/Rome"
     client.tls_set_context(ctx)
     client.tls_insecure_set(True)
     client.username_pw_set(blid, roomba_pwd)
-
     log.info(f"Connecting MQTT client with BLID={blid}...")
     client.connect(HOST, PORT, keepalive=60)
     client.loop_start()
     time.sleep(1)
-
     ssid_hex = binascii.hexlify(wifi_ssid.encode("utf-8")).decode("ascii")
-    
     commands = [
         ("delta", {"state": {"timezone": timezone}}),
         ("delta", {"state": {"country": country}}),
@@ -90,16 +88,15 @@ def provision_wifi(blid, wifi_ssid, wifi_psk, roomba_pwd, timezone="Europe/Rome"
         ("wifictl", {"state": {"get": "netinfo"}}),
         ("wifictl", {"state": {"uap": False}}),
     ]
-
     for topic, payload in commands:
         body = json.dumps(payload)
         log.info(f"Publishing to {topic}...")
         client.publish(topic, body)
         time.sleep(1.5)
-
     client.loop_stop()
     client.disconnect()
     log.info("Wi-Fi configuration sent. Roomba will now shut down SoftAP and join your home Wi-Fi.")
+
 
 def main():
     parser = argparse.ArgumentParser(description="Provision Wi-Fi credentials on iRobot Roomba without the mobile app")
@@ -109,32 +106,27 @@ def main():
     parser.add_argument("-t", "--timezone", default="Europe/Rome", help="Timezone (default: Europe/Rome)")
     parser.add_argument("-c", "--country", default="IT", help="Country code (default: IT)")
     args = parser.parse_args()
-
     ssid = args.ssid
     if not ssid:
         ssid = input("Enter target 2.4 GHz Wi-Fi SSID: ").strip()
-
     wifi_psk = args.password
     if not wifi_psk:
         wifi_psk = getpass.getpass("Enter target Wi-Fi Password: ")
-
     roomba_pwd = generate_roomba_password()
     log.info(f"Generated new Roomba MQTT password: {roomba_pwd}")
-
     provision_password(roomba_pwd)
     time.sleep(2)
     provision_wifi(args.blid, ssid, wifi_psk, roomba_pwd, args.timezone, args.country)
-
     print("\n" + "="*55)
     print("SUCCESSFULLY CONFIGURED ROOMBA!")
     print(f"BLID:     {args.blid}")
     print(f"Password: {roomba_pwd}")
     print("="*55 + "\n")
-
     cred_file = os.path.join(SCRIPT_DIR, "CREDENTIALS.txt")
     with open(cred_file, "w") as f:
         f.write(f"BLID={args.blid}\nPASSWORD={roomba_pwd}\nWIFI_SSID={ssid}\n")
     print(f"Updated credentials saved to {cred_file}")
+
 
 if __name__ == "__main__":
     main()
