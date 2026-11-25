@@ -3,5 +3,10 @@ Every configuration option available in the iRobot mobile app corresponds to an 
 
 
 ## 1. Quick CLI Management (`manage_roomba.py`)
-
 All commands read credentials automatically from `CREDENTIALS.txt`.
+
+### Inspect Current Configuration
+```sh
+./manage_roomba.py --get
+```
+
