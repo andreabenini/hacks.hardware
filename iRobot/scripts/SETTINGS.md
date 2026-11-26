@@ -41,3 +41,14 @@ All commands read credentials automatically from `CREDENTIALS.txt`.
 ```
 
 ---
+
+## 2. Raw MQTT Protocol Details
+
+If publishing directly via MQTT client or home automation scripts:
+
+* **Host:** `192.168.100.158:8883` (TLS)
+* **Client ID:** `<BLID>` (e.g. `1234567890123456`)
+* **Username:** `<BLID>`
+* **Password:** `<Password>`
+* **Cipher:** `AES128-SHA256` (TLS 1.2, SECLEVEL=0)
+* **Clean Session:** `False`
