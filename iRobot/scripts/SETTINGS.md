@@ -52,3 +52,20 @@ If publishing directly via MQTT client or home automation scripts:
 * **Password:** `<Password>`
 * **Cipher:** `AES128-SHA256` (TLS 1.2, SECLEVEL=0)
 * **Clean Session:** `False`
+
+### Preferences (Topic: `delta`)
+Publish JSON with a root `state` object:
+
+| Setting | Value | Payload |
+| :--- | :--- | :--- |
+| **Passes: 1 Pass** | Fixed 1 pass | `{"state": {"noAutoPasses": true, "twoPass": false}}` |
+| **Passes: 2 Passes** | Fixed 2 passes | `{"state": {"noAutoPasses": true, "twoPass": true}}` |
+| **Passes: Auto** | Roomba decides | `{"state": {"noAutoPasses": false, "twoPass": false}}` |
+| **Edge Clean: ON** | Clean perimeter | `{"state": {"openOnly": false}}` |
+| **Edge Clean: OFF** | Open areas only | `{"state": {"openOnly": true}}` |
+| **Bin Pause: ON** | Pause if full | `{"state": {"binPause": true}}` |
+| **Bin Pause: OFF** | Always finish | `{"state": {"binPause": false}}` |
+| **Carpet Boost: Auto** | Auto boost | `{"state": {"carpetBoost": true, "vacHigh": false}}` |
+| **Carpet Boost: High** | Max suction | `{"state": {"carpetBoost": false, "vacHigh": true}}` |
+| **Carpet Boost: Eco** | Low suction | `{"state": {"carpetBoost": false, "vacHigh": false}}` |
+| **Voice Language** | Index from `langs` | `{"state": {"language": 3}}` |
